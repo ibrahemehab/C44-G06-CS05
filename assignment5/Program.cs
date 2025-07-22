@@ -76,32 +76,54 @@ namespace assignment5
             //Console.WriteLine(minimum);
             #endregion
             #region q5
-            //
-            
-            int[] array = { 58, 4, 2, 6, 6, 8, 9, 10, 30, 59 };
-            int maximum = int.MinValue;
-            int maximum2 = int.MinValue;
-            for (int i = 0; i < array.Length; i++)
-            {
-                if (array[i] > maximum)
-                    maximum = array[i];
-            }
-            Console.WriteLine(maximum);
-            for (int i = 0; i < array.Length; i++)
-            {
-                if (array[i] == maximum)
-                {
-                    continue;
-                }
-                else
-                {
-                    if (array[i] > maximum2)
-                        maximum2 = array[i];
-                }
-            }
-            Console.WriteLine(maximum2);
+            //Write a program in C# Sharp to find the second largest element in an
+            //array.
+
+            //int[] array = { 58, 4, 2, 6, 6, 8, 9, 10, 30, 59 };
+            //int maximum = int.MinValue;
+            //int maximum2 = int.MinValue;
+            //for (int i = 0; i < array.Length; i++)
+            //{
+            //    if (array[i] > maximum)
+            //        maximum = array[i];
+            //}
+            //Console.WriteLine(maximum);
+            //for (int i = 0; i < array.Length; i++)
+            //{
+            //    if (array[i] == maximum)
+            //    {
+            //        continue;
+            //    }
+            //    else
+            //    {
+            //        if (array[i] > maximum2)
+            //            maximum2 = array[i];
+            //    }
+            //}
+            //Console.WriteLine(maximum2);
 
 
+            #endregion
+            #region q6
+            int[] array = new int[10];
+            int distance = 0;
+            int maxdistance = int.MinValue;
+            for(int i = 0; i < array.Length;i++)
+            {
+                array[i] = int.Parse(Console.ReadLine());
+            }
+            for (int i = 0; i < array.Length; i++)
+
+                for (int j = i + 1; j < array.Length; j++)
+                {
+                    if (array[i] == array[j]) 
+                    { 
+                        distance = j - i - 1;
+                        if (distance > maxdistance)
+                            maxdistance = distance;
+                    }
+                }
+            Console.WriteLine($"max index is {maxdistance}");
             #endregion
         }
     }
