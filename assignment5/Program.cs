@@ -42,21 +42,65 @@ namespace assignment5
             #region q3
             //Write a program in C# Sharp to merge two arrays of the same size sorted in
             //ascending order.
-            int size = 2;
-            int[] numbers01 = { 5, 2 };
-            int[] numbers02 = { 3, 8 };
-            int[] merged = new int[2*2];
-            for (int i = 0; i < numbers01.Length; i++)
+            //int size = 2;
+            //int[] numbers01 = { 5, 2 };
+            //int[] numbers02 = { 3, 8 };
+            //int[] merged = new int[2*2];
+            //for (int i = 0; i < numbers01.Length; i++)
+            //{
+            //    merged[i] = numbers01[i];
+            //}
+            //for (int i = 0; i < numbers02.Length; i++)
+            //{
+            //    merged[size+i] = numbers02[i];
+            //}
+            //Array.Sort(merged);
+            //foreach (int i in merged)
+            //    Console.WriteLine(i);
+
+            #endregion
+            #region q4
+            //Write a program in C# Sharp to find maximum and minimum element in an
+            //array = { 2, 4, 2, 6, 6, 8, 9, 10, 30, 59, 58 }
+            //int[] array = { 2, 4, 2, 6, 6, 8, 9, 10, 30, 59, 58 };
+            //int minimum = int.MaxValue;
+            //int maximum = int.MinValue;
+            //for (int i = 0; i < array.Length; i++)
+            //{
+            //    if (array[i] < minimum)
+            //        minimum = array[i];
+            //    if (array[i] > maximum)
+            //        maximum = array[i];
+            //}
+            //Console.WriteLine(maximum);
+            //Console.WriteLine(minimum);
+            #endregion
+            #region q5
+            //
+            
+            int[] array = { 58, 4, 2, 6, 6, 8, 9, 10, 30, 59 };
+            int maximum = int.MinValue;
+            int maximum2 = int.MinValue;
+            for (int i = 0; i < array.Length; i++)
             {
-                merged[i] = numbers01[i];
+                if (array[i] > maximum)
+                    maximum = array[i];
             }
-            for (int i = 0; i < numbers02.Length; i++)
+            Console.WriteLine(maximum);
+            for (int i = 0; i < array.Length; i++)
             {
-                merged[size+i] = numbers02[i];
+                if (array[i] == maximum)
+                {
+                    continue;
+                }
+                else
+                {
+                    if (array[i] > maximum2)
+                        maximum2 = array[i];
+                }
             }
-            Array.Sort(merged);
-            foreach (int i in merged)
-                Console.WriteLine(i);
+            Console.WriteLine(maximum2);
+
 
             #endregion
         }
