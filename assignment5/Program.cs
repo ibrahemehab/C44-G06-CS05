@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.Diagnostics.Tracing;
+using System.Drawing;
 
 namespace assignment5
 {
@@ -127,17 +128,29 @@ namespace assignment5
             #endregion
             #region q7
             //
-            string sentence = "hello world how are you";
-            string[] words = sentence.Split(' ');
-            string reversed= "";
-            for (int i = words.Length-1; i >= 0 ; i--)
+            //string sentence = "omar essam mohamed ali ";
+            //string[] words = sentence.Split(' ');
+            //string reversed = "";
+            //for (int i = words.Length - 1; i >= 0; i--)
+            //{
+            //    reversed += words[i] + " ";
+            //}
+            //Console.WriteLine(reversed);
+            string input = "this is a test";
+            string result = ""; 
+            int end = input.Length;
+            for (int i = input.Length - 1; i >= 0; i--)
             {
-                reversed += words[i] + " ";
-                
+                if (input[i] == ' ')
+                {
+                    string word = input.Substring(i + 1, end - i - 1);
+                    result += word + " ";
+                    end = i;
+                }
             }
-                Console.WriteLine(reversed);
-            
-            
+            string word2 = input.Substring(0, end);
+            result += word2;
+            Console.WriteLine(result);
 
             #endregion
         }
