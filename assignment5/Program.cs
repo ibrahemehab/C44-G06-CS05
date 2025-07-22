@@ -31,14 +31,34 @@ namespace assignment5
             #endregion
             #region q2
             //Write a program in C# Sharp to find the sum of all elements of the array.
-            int[] numbers = {1,4,6,7};
-            int sum = 0;
-            for (int i = 0; i < numbers.Length; i++)
+            //int[] numbers = {1,4,6,7};
+            //int sum = 0;
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    sum += numbers[i];
+            //}
+            //Console.WriteLine($"the sum of all elements of the array is : {sum}");
+            #endregion
+            #region q3
+            //Write a program in C# Sharp to merge two arrays of the same size sorted in
+            //ascending order.
+            int size = 2;
+            int[] numbers01 = { 5, 2 };
+            int[] numbers02 = { 3, 8 };
+            int[] merged = new int[2*2];
+            for (int i = 0; i < numbers01.Length; i++)
             {
-                sum += numbers[i];
+                merged[i] = numbers01[i];
             }
-            Console.WriteLine($"the sum of all elements of the array is : {sum}");
-                #endregion
+            for (int i = 0; i < numbers02.Length; i++)
+            {
+                merged[size+i] = numbers02[i];
+            }
+            Array.Sort(merged);
+            foreach (int i in merged)
+                Console.WriteLine(i);
+
+            #endregion
         }
     }
 }
