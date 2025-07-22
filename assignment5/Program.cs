@@ -1,5 +1,9 @@
-﻿using System.Diagnostics.Tracing;
+﻿using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Drawing;
+using System.Net.NetworkInformation;
+using System.Xml.Linq;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace assignment5
 {
@@ -136,21 +140,54 @@ namespace assignment5
             //    reversed += words[i] + " ";
             //}
             //Console.WriteLine(reversed);
-            string input = "this is a test";
-            string result = ""; 
-            int end = input.Length;
-            for (int i = input.Length - 1; i >= 0; i--)
+            //string input = "this is a test";
+            //string result = ""; 
+            //int end = input.Length;
+            //for (int i = input.Length - 1; i >= 0; i--)
+            //{
+            //    if (input[i] == ' ')
+            //    {
+            //        string word = input.Substring(i + 1, end - i - 1);
+            //        result += word + " ";
+            //        end = i;
+            //    }
+            //}
+            //string word2 = input.Substring(0, end);
+            //result += word2;
+            //Console.WriteLine(result);
+
+            #endregion
+            #region q8
+            //Write a program to create two multidimensional arrays of same size. Accept
+            //value from user and store them in first array. Now copy all the elements of
+            //first array on second array and print second array. 
+
+
+            #endregion
+            #region q8
+            //Write a program to create two multidimensional arrays of same size. Accept
+            //value from user and store them in first array. Now copy all the elements of
+            //first array on second array and print second array.
+            int[,] array1 = new int[2, 3];
+            int[,] array2 = new int[2, 3];
+            for (int i = 0; i < array1.GetLength(0); i++)
             {
-                if (input[i] == ' ')
+                for (int j = 0; j < array1.GetLength(1); j++)
                 {
-                    string word = input.Substring(i + 1, end - i - 1);
-                    result += word + " ";
-                    end = i;
+                    array1[i, j] = int.Parse(Console.ReadLine());
                 }
             }
-            string word2 = input.Substring(0, end);
-            result += word2;
-            Console.WriteLine(result);
+            for (int i = 0; i < array2.GetLength(0); i++)
+            {
+                for (int j = 0; j < array2.GetLength(1); j++)
+                {
+                    array2[i, j] = array1[i, j];
+                }
+            }
+            foreach ( int i in array2)
+            {
+                Console.WriteLine(i);
+            }
 
             #endregion
         }
