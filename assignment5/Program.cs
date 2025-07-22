@@ -105,25 +105,40 @@ namespace assignment5
 
             #endregion
             #region q6
-            int[] array = new int[10];
-            int distance = 0;
-            int maxdistance = int.MinValue;
-            for(int i = 0; i < array.Length;i++)
-            {
-                array[i] = int.Parse(Console.ReadLine());
-            }
-            for (int i = 0; i < array.Length; i++)
+            //int[] array = new int[10];
+            //int distance = 0;
+            //int maxdistance = int.MinValue;
+            //for(int i = 0; i < array.Length;i++)
+            //{
+            //    array[i] = int.Parse(Console.ReadLine());
+            //}
+            //for (int i = 0; i < array.Length; i++)
 
-                for (int j = i + 1; j < array.Length; j++)
-                {
-                    if (array[i] == array[j]) 
-                    { 
-                        distance = j - i - 1;
-                        if (distance > maxdistance)
-                            maxdistance = distance;
-                    }
-                }
-            Console.WriteLine($"max index is {maxdistance}");
+            //    for (int j = i + 1; j < array.Length; j++)
+            //    {
+            //        if (array[i] == array[j]) 
+            //        { 
+            //            distance = j - i - 1;
+            //            if (distance > maxdistance)
+            //                maxdistance = distance;
+            //        }
+            //    }
+            //Console.WriteLine($"max index is {maxdistance}");
+            #endregion
+            #region q7
+            //
+            string sentence = "hello world how are you";
+            string[] words = sentence.Split(' ');
+            string reversed= "";
+            for (int i = words.Length-1; i >= 0 ; i--)
+            {
+                reversed += words[i] + " ";
+                
+            }
+                Console.WriteLine(reversed);
+            
+            
+
             #endregion
         }
     }
