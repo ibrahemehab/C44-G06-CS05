@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics.Tracing;
 using System.Drawing;
 using System.Net.NetworkInformation;
@@ -168,27 +169,34 @@ namespace assignment5
             //Write a program to create two multidimensional arrays of same size. Accept
             //value from user and store them in first array. Now copy all the elements of
             //first array on second array and print second array.
-            int[,] array1 = new int[2, 3];
-            int[,] array2 = new int[2, 3];
-            for (int i = 0; i < array1.GetLength(0); i++)
+            //int[,] array1 = new int[2, 3];
+            //int[,] array2 = new int[2, 3];
+            //for (int i = 0; i < array1.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < array1.GetLength(1); j++)
+            //    {
+            //        array1[i, j] = int.Parse(Console.ReadLine());
+            //    }
+            //}
+            //for (int i = 0; i < array2.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < array2.GetLength(1); j++)
+            //    {
+            //        array2[i, j] = array1[i, j];
+            //    }
+            //}
+            //foreach ( int i in array2)
+            //{
+            //    Console.WriteLine(i);
+            //}
+            #endregion
+            #region q9
+            int[] numbers = { 10, 20, 30, 40, 50 };
+            Console.WriteLine("Array in reverse order:");
+            for (int i = numbers.Length - 1; i >= 0; i--)
             {
-                for (int j = 0; j < array1.GetLength(1); j++)
-                {
-                    array1[i, j] = int.Parse(Console.ReadLine());
-                }
+                Console.Write(numbers[i] + " ");
             }
-            for (int i = 0; i < array2.GetLength(0); i++)
-            {
-                for (int j = 0; j < array2.GetLength(1); j++)
-                {
-                    array2[i, j] = array1[i, j];
-                }
-            }
-            foreach ( int i in array2)
-            {
-                Console.WriteLine(i);
-            }
-
             #endregion
         }
     }
